@@ -23,7 +23,7 @@ const Post = () => {
     const fetchPosts = async() => {
       setLoading(true)
       try {
-        const response = await axios.get("http://localhost:8080/api/post/")
+        const response = await axios.get("https:///api/post/")
 
           setAllPosts(response.data.data.reverse())
           console.log("AllPost:",allPosts)
