@@ -49,7 +49,7 @@ const Create = () => {
       try {
         setGeneratingImage(true)
 
-        const response = await axios.post("http://localhost:8080/api/sd",{
+        const response = await axios.post("https://ai-imagegenerate.onrender.com/api/sd",{
           prompt:form.prompt
         })//向后端sd api发送prompt调用dall-e返回Base_64格式的图片
 

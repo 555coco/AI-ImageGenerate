@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-image-generate-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: MONGODB_URL
+        sync: false
+      - key: LAOZHANG_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000 
