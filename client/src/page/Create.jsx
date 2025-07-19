@@ -96,7 +96,7 @@ const Create = () => {
     if(form.photo){
       setLoading(true)
       try {
-        const responce = await axios.post("http://localhost:8080/api/post/",form)
+        const responce = await axios.post("https://ai-imagegenerate.onrender.com/api/post/",form)
         alert("success")
         navigate("/")
       } catch (error) {
