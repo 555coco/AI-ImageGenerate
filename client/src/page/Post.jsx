@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import BackGround from '../assets/bg2.jpg'
 import Loader from '../components/Loader';
 import Card from '../components/Card';
-import axios, { all } from 'axios';
+import apiClient from '../config/api';
 import Masonry from 'react-masonry-css';
 
 const RenderCards = ({data,title}) => {
@@ -23,7 +23,7 @@ const Post = () => {
     const fetchPosts = async() => {
       setLoading(true)
       try {
-        const response = await axios.get("https://ai-imagegenerate.onrender.com/api/post/")
+        const response = await apiClient.get("/api/post/")
 
           setAllPosts(response.data.data.reverse())
           console.log("AllPost:",allPosts)

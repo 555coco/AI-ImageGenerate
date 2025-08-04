@@ -5,7 +5,7 @@ import FormField from '../components/FormField'
 import prompts from '../constant/index'
 import { HiOutlinePhoto } from "react-icons/hi2";
 import Loader from '../components/Loader'
-import axios from 'axios'
+import apiClient from '../config/api'
 import { useDispatch, useSelector } from 'react-redux'
 import { setPhoto } from '../store'
 import { useNavigate } from 'react-router-dom'
@@ -49,7 +49,7 @@ const Create = () => {
       try {
         setGeneratingImage(true)
 
-        const response = await axios.post("https://ai-imagegenerate.onrender.com/api/sd",{
+        const response = await apiClient.post("/api/sd",{
           prompt:form.prompt
         })//向后端sd api发送prompt调用dall-e返回Base_64格式的图片
 
@@ -96,7 +96,7 @@ const Create = () => {
     if(form.photo){
       setLoading(true)
       try {
-        const responce = await axios.post("https://ai-imagegenerate.onrender.com/api/post/",form)
+        const responce = await apiClient.post("/api/post/",form)
         alert("success")
         navigate("/")
       } catch (error) {
