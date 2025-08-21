@@ -19,7 +19,7 @@ router.route('/').post(async (req, res) => {
     if (!prompt) {
       return res.status(400).json({ error: 'Prompt is required' })
     }
-
+    
     const openai = new OpenAI({
       apiKey: process.env.LAOZHANG_API_KEY,
       baseURL: "https://api.laozhang.ai/v1"

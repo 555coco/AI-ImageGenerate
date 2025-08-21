@@ -8,7 +8,8 @@ const Card = ({_id, name, prompt, photo}) => {
         <div className="rounded-xl group relative aspect-square hover:shadow-2xl transition-shadow duration-300 bg-white/10 overflow-hidden">
             <img src={photo}
                 className="w-full h-auto rounded-xl group-hover:scale-105"
-                alt={prompt} />
+                alt={prompt}
+                loading="lazy" />
             <div className="group-hover:flex flex-col rounded-xl w-full hidden absolute bottom-0 bg-[#10131f]">
                 <p className="text-xs m-2">{prompt}</p>
                 <div className="flex items-center">

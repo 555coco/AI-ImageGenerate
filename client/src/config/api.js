@@ -3,12 +3,12 @@ const API_CONFIG = {
   // 开发环境
   development: {
     baseURL: 'http://localhost:8080',
-    timeout: 30000
+    timeout: 300000
   },
   // 生产环境
   production: {
     baseURL: 'https://ai-imagegenerate.onrender.com',
-    timeout: 30000
+    timeout: 300000
   }
 }
 

@@ -21,7 +21,7 @@ const Create = () => {
     name:'',
     prompt:'',
     photo:''
-  })//表单元素
+  })//表单元素 表单元素是name，prompt，photo
 
   const [generatingImage,setGeneratingImage] = useState(false)//当按下生成按钮时变成true，展示Loader组件
   
@@ -35,6 +35,7 @@ const Create = () => {
     }
   }, [dispatch])
 
+  // 处理表单改变时的操作
   const handleChange = (e) => {
     setForm({...form,[e.target.name]:e.target.value})
   }
