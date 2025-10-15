@@ -73,10 +73,10 @@ const Post = () => {
                  }}>
         <Navbar />
         <div className='pt-23'>
-            <h1 className='font-extrabold text-4xl ml-20'>The Community Showcase</h1>
-            <p className='mt-2 ml-20 text-white/70'>You can post and download pictures that you're interested in this page</p>
+            <h1 className='font-extrabold text-4xl ml-20 text-white dark:text-white'>The Community Showcase</h1>
+            <p className='mt-2 ml-20 text-white/60 dark:text-white/80'>You can post and download pictures that you're interested in this page</p>
             <div className='mt-4 ml-20'>
-              <input className='input w-100 text-purple-200 border-purple-400 border-2'
+              <input className='input w-100 border-purple-400 border-2 bg-white/80 dark:bg-white/10 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-300'
                       placeholder='you can search photos in here'
                       onChange={handleSearchChange}
                       value={searchText} />

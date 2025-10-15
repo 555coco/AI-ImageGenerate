@@ -7,11 +7,11 @@ const Navbar = () => {
   const location = useLocation()
   
   return (
-    <div className='fixed w-full h-16 backdrop-blur-md bg-gradient-to-b from-[#A557FF] to-[#6B21A8] bg-opacity-70 z-10'>
+    <div className='fixed w-full h-16 backdrop-blur-md bg-gradient-to-b from-[#A557FF] to-[#6B21A8] bg-opacity-70 z-10 text-white'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center mt-1 ml-3'>
           <SiOpenai className='text-5xl'/>
-          <h1 className='text-white/80 text-3xl ml-2 font-bold'>OpenAI.<span className='text-[#6c5ce7]'>HWY</span></h1>
+          <h1 className='text-white/90 text-3xl ml-2 font-bold'>OpenAI.<span className='text-[#e9d5ff]'>HWY</span></h1>
         </div>
         <div>
           <button className='btn mr-4 w-25' onClick={() => {{location.pathname === '/' ? navigate('/create') : navigate('/')}}}>{location.pathname === '/' ? "Create" : "Post" }</button>

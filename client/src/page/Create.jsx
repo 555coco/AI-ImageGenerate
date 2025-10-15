@@ -135,8 +135,8 @@ const Create = () => {
       <div className=''>
           <Navbar />
           <div>
-            <h1 className='pt-30 ml-8 font-bold text-5xl'>Create</h1>
-            <p className='text-sm mt-3 ml-8 text-white/70'>你可以在这个页面创建属于自己的具有想象力的照片并且可以分享到社区或者下载</p>
+            <h1 className='pt-30 ml-8 font-bold text-5xl text-white dark:text-white'>Create</h1>
+            <p className='text-sm mt-3 ml-8 text-white dark:text-white/80'>你可以在这个页面创建属于自己的具有想象力的照片并且可以分享到社区或者下载</p>
           </div>
           <FormField labelName="Your Name"
                       type="text"
@@ -163,7 +163,7 @@ const Create = () => {
                         alt={form.prompt}
                         className='h-full w-full' />
                 ) : (
-                  <HiOutlinePhoto className='absolute text-9xl opacity-50'/>
+                  <HiOutlinePhoto className='absolute text-9xl opacity-50 text-gray-500 dark:text-gray-300'/>
                 )}
 
                 {generatingImage && (
